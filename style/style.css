@@ -1,0 +1,208 @@
+:root {
+  --dark-blue: #202046;
+  --grayish-blue: #babacf;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  background-image: url("../images/pattern-bg.svg"), url("../images/pattern-curve.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: right top, left bottom;
+  background-size: contain, 20rem;
+}
+
+.container {
+  max-width: 1024px;
+  margin: auto;
+}
+
+.slide-container {
+  padding: 20px;
+}
+
+.slide-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  -ms-grid-columns: 1fr minmax(200px, 1fr);
+      grid-template-columns: 1fr minmax(200px, 1fr);
+}
+
+.img-fluid {
+  max-width: 100%;
+}
+
+.slide-container__text-container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.slide-container__desc {
+  font-size: 2rem;
+  margin-right: -6rem;
+  padding-top: 50px;
+  color: var(--dark-blue);
+  background-image: url("../images/pattern-quotes.svg");
+  background-repeat: no-repeat;
+  background-size: 80px;
+  background-position: 80px 3px;
+}
+
+.slide-container__info {
+  font-size: 1rem;
+  margin-top: 2rem;
+  color: var(--dark-blue);
+}
+
+.slide-container__info .role {
+  font-weight: 500;
+  opacity: .3;
+}
+
+.slide-container__image {
+  position: relative;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+  z-index: -1;
+  opacity: 1;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-light {
+  font-weight: 300;
+}
+
+.slide-container__image-container {
+  position: relative;
+  -webkit-box-shadow: 0px 10px 20px rgba(150, 145, 145, 0.493);
+          box-shadow: 0px 10px 20px rgba(150, 145, 145, 0.493);
+}
+
+.slide-container__controls-container {
+  position: absolute;
+  border-radius: 50%;
+  bottom: 0;
+  left: 0;
+  -webkit-box-shadow: 0px 10px 10px rgba(184, 184, 184, 0.74);
+          box-shadow: 0px 10px 10px rgba(184, 184, 184, 0.74);
+  -webkit-transform: translate(50%, 50%);
+          transform: translate(50%, 50%);
+}
+
+.btn {
+  background: #fafafa;
+  padding: 10px 0;
+  border: none;
+  text-transform: uppercase;
+  height: 100%;
+  font-weight: 700;
+  color: black;
+  letter-spacing: 1px;
+  font-size: inherit;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn.previus {
+  padding-right: 15px;
+  padding-left: 12px;
+  border-radius: 50px 0 0 50px;
+}
+
+.btn.next {
+  padding-left: 15px;
+  padding-right: 12px;
+  border-radius: 0 50px 50px 0;
+}
+
+@media screen and (max-width: 650px) {
+  .slide-container {
+    -ms-grid-rows: (auto)[2];
+        grid-template-rows: repeat(2, auto);
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    row-gap: 70px;
+    padding: 70px;
+  }
+  .slide-container__text-container {
+    -ms-grid-row: 2;
+    grid-row: 2;
+    text-align: center;
+  }
+  .slide-container__desc {
+    font-size: 1rem;
+  }
+  .slide-container__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .slide-container__image-container {
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+  .slide-container__controls-container {
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%, 50%);
+            transform: translate(-50%, 50%);
+  }
+  p {
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .slide-container__desc {
+    font-size: 1.5rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
