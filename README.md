@@ -23,10 +23,11 @@ Users should be able to:
 - View the optimal layout for the site depending on their device's screen size
 
 ### Screenshot
-Desktop version:
+
+#### Desktop version:
 ![Desktop version](./design/screenshot-desktop.png)
 
-Mobile version:
+#### Mobile version:
 ![Mobile version](./design/screenshot-mobile.png)
 
 ### Links
